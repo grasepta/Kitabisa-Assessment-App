@@ -43,22 +43,8 @@ class MoviesViewModel {
     }
     
     private func getMoviesData(_ urlString: String, _ preference: whichPreference) {
-        guard let url = URL(string: urlString) else { return }
-        
-        let task = URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data = data, error == nil else { return }
-            print("Got data: \(data)")
-            
-            var result: MoviesResponse?
-            do {
-                try result = JSONDecoder().decode(MoviesResponse.self, from: data)
-            } catch {
-                print("Failed to Decode with error: \(error.localizedDescription)")
-            }
-            guard let final = result?.movies else { return }
-            print(final)
-            self.bindData(final, preference)
+        NetworkManager().fetchData(url: urlString) { (data: MoviesResponse?) in
+            self.bindData(data?.movies ?? [], preference)
         }
-        task.resume()
     }
 }

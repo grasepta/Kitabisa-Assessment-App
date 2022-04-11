@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Kitabisa Assessment App-->
+        <!--Info Film Bisa-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MovieListsVC" customModule="Kitabisa_Assessment_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -74,6 +74,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="overviewLabel" destination="8Gm-zM-3nW" id="a2Q-Zj-yBf"/>
+                                            <outlet property="posterImageView" destination="Niy-GW-QLc" id="3zU-hE-xco"/>
                                             <outlet property="releaseDateLabel" destination="WIi-8W-JaE" id="tRe-Xc-Z1X"/>
                                             <outlet property="titleLabel" destination="7Uy-am-SUN" id="ERV-cx-FcY"/>
                                         </connections>
@@ -90,7 +91,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BSd-yB-KIg" secondAttribute="bottom" id="pIS-xb-p6K"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Kitabisa Assessment App" id="nGn-Gg-lxe">
+                    <navigationItem key="navigationItem" title="Info Film Bisa" id="nGn-Gg-lxe">
                         <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="oqf-zd-gX7"/>
                     </navigationItem>
                     <connections>

@@ -90,9 +90,13 @@ extension MovieListsVC: UITableViewDelegate, UITableViewDataSource {
         case 2:
             movieData = moviesVM.nowPlayingMovies.value?[indexPath.row]
         default:
-            cell.bindData("Not Found", "Not Found", "Not Found")
+            cell.bindData("Not Found", "Not Found", "Not Found", "")
         }
-        cell.bindData(movieData?.title ?? "Not Found", movieData?.releaseDate ?? "Not Found", movieData?.overview ?? "Not Found")
+        cell.bindData(
+            movieData?.title ?? "Not Found",
+            movieData?.releaseDate ?? "Not Found",
+            movieData?.overview ?? "Not Found",
+            movieData?.posterPath ?? "")
         return cell
     }
     

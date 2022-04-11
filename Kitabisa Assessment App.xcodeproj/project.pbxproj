@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B77271C5280301E90040DDEA /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77271C4280301E90040DDEA /* MoviesViewModel.swift */; };
 		B77271CB280327910040DDEA /* MoviesListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77271CA280327910040DDEA /* MoviesListTableViewCell.swift */; };
+		B77271CE2803DEBA0040DDEA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77271CD2803DEBA0040DDEA /* NetworkManager.swift */; };
 		B774741A2802938400DC3AE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77474192802938400DC3AE2 /* AppDelegate.swift */; };
 		B774741C2802938400DC3AE2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774741B2802938400DC3AE2 /* SceneDelegate.swift */; };
 		B774741E2802938400DC3AE2 /* MovieListsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774741D2802938400DC3AE2 /* MovieListsVC.swift */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		B77271C4280301E90040DDEA /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
 		B77271CA280327910040DDEA /* MoviesListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListTableViewCell.swift; sourceTree = "<group>"; };
+		B77271CD2803DEBA0040DDEA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B77474162802938400DC3AE2 /* Kitabisa Assessment App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kitabisa Assessment App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B77474192802938400DC3AE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B774741B2802938400DC3AE2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B77271CC2803DEAB0040DDEA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B77271CD2803DEBA0040DDEA /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		B774740D2802938400DC3AE2 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +129,7 @@
 		B77474182802938400DC3AE2 /* Kitabisa Assessment App */ = {
 			isa = PBXGroup;
 			children = (
+				B77271CC2803DEAB0040DDEA /* Network */,
 				B77271C9280327460040DDEA /* View */,
 				B77474552802A69300DC3AE2 /* Assets */,
 				B77474542802A68400DC3AE2 /* Storyboard */,
@@ -334,6 +345,7 @@
 			files = (
 				B774741E2802938400DC3AE2 /* MovieListsVC.swift in Sources */,
 				B77474242802938400DC3AE2 /* Kitabisa_Assessment_App.xcdatamodeld in Sources */,
+				B77271CE2803DEBA0040DDEA /* NetworkManager.swift in Sources */,
 				B774744E2802A22700DC3AE2 /* MoviesModel.swift in Sources */,
 				B77474572802A6B200DC3AE2 /* Observable.swift in Sources */,
 				B774741A2802938400DC3AE2 /* AppDelegate.swift in Sources */,
