@@ -26,6 +26,8 @@ class MovieListsVC: UIViewController {
     }
     
     func setupMovieListTV() {
+        let nib = UINib(nibName: "MoviesTableViewCell", bundle: nil)
+        movieListTV.register(nib, forCellReuseIdentifier: "MoviesTableViewCell")
         movieListTV.dataSource = self
         movieListTV.delegate = self
     }
@@ -58,7 +60,17 @@ class MovieListsVC: UIViewController {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let vc = storyBoard.instantiateViewController(withIdentifier: "MovieDetailVC") as! MovieDetailVC
         vc.selectedMovieId = movieId
-        self.present(vc, animated:true, completion:nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func navigateToFavoriteMovie() {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "FavoriteMovieVC") as! FavoriteMovieVC
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func favButtonPressed(_ sender: Any) {
+        navigateToFavoriteMovie()
     }
 }
 
@@ -86,7 +98,7 @@ extension MovieListsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = movieListTV.dequeueReusableCell(withIdentifier: "MoviesListCell", for: indexPath) as! MoviesListTableViewCell
+        let cell = movieListTV.dequeueReusableCell(withIdentifier: "MoviesTableViewCell", for: indexPath) as! MoviesTableViewCell
         var movieData: MovieModel? = nil
         switch indexPath.section {
         case 0:
