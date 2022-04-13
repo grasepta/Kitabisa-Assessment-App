@@ -10,7 +10,7 @@ import UIKit
 class MovieListsVC: UIViewController {
 
     var preferencesVM = PreferencesViewModel()
-    var moviesVM = MoviesViewModel()
+    var moviesListVM = MoviesListViewModel()
     
     @IBOutlet weak var movieListTV: UITableView!
     
@@ -26,23 +26,22 @@ class MovieListsVC: UIViewController {
     }
     
     func setupMovieListTV() {
-        
         movieListTV.dataSource = self
         movieListTV.delegate = self
     }
     
     func setupListener() {
-        moviesVM.topRatedMovies.bind { [weak self] _ in
+        moviesListVM.topRatedMovies.bind { [weak self] _ in
             DispatchQueue.main.async {
                 self?.movieListTV.reloadData()
             }
         }
-        moviesVM.popularMovies.bind { [weak self] _ in
+        moviesListVM.popularMovies.bind { [weak self] _ in
             DispatchQueue.main.async {
                 self?.movieListTV.reloadData()
             }
         }
-        moviesVM.nowPlayingMovies.bind { [weak self] _ in
+        moviesListVM.nowPlayingMovies.bind { [weak self] _ in
             DispatchQueue.main.async {
                 self?.movieListTV.reloadData()
             }
@@ -50,9 +49,16 @@ class MovieListsVC: UIViewController {
     }
     
     func getData() {
-        moviesVM.getMovies(.popular)
-        moviesVM.getMovies(.topRated)
-        moviesVM.getMovies(.nowPlaying)
+        moviesListVM.getMovies(.popular)
+        moviesListVM.getMovies(.topRated)
+        moviesListVM.getMovies(.nowPlaying)
+    }
+    
+    func navigateToMovieDetail(_ movieId: Int) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "MovieDetailVC") as! MovieDetailVC
+        vc.selectedMovieId = movieId
+        self.present(vc, animated:true, completion:nil)
     }
 }
 
@@ -69,11 +75,11 @@ extension MovieListsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return moviesVM.popularMovies.value?.count ?? 0
+            return moviesListVM.popularMovies.value?.count ?? 0
         case 1:
-            return moviesVM.topRatedMovies.value?.count ?? 0
+            return moviesListVM.topRatedMovies.value?.count ?? 0
         case 2:
-            return moviesVM.nowPlayingMovies.value?.count ?? 0
+            return moviesListVM.nowPlayingMovies.value?.count ?? 0
         default:
             return 0
         }
@@ -84,11 +90,11 @@ extension MovieListsVC: UITableViewDelegate, UITableViewDataSource {
         var movieData: MovieModel? = nil
         switch indexPath.section {
         case 0:
-            movieData = moviesVM.popularMovies.value?[indexPath.row]
+            movieData = moviesListVM.popularMovies.value?[indexPath.row]
         case 1:
-            movieData = moviesVM.topRatedMovies.value?[indexPath.row]
+            movieData = moviesListVM.topRatedMovies.value?[indexPath.row]
         case 2:
-            movieData = moviesVM.nowPlayingMovies.value?[indexPath.row]
+            movieData = moviesListVM.nowPlayingMovies.value?[indexPath.row]
         default:
             cell.bindData("Not Found", "Not Found", "Not Found", "")
         }
@@ -106,5 +112,21 @@ extension MovieListsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        var movieData: MovieModel? = nil
+        switch indexPath.section {
+        case 0:
+            movieData = moviesListVM.popularMovies.value?[indexPath.row]
+        case 1:
+            movieData = moviesListVM.topRatedMovies.value?[indexPath.row]
+        case 2:
+            movieData = moviesListVM.nowPlayingMovies.value?[indexPath.row]
+        default:
+            break
+        }
+        if let selectedMovieId = movieData?.id {
+            navigateToMovieDetail(selectedMovieId)
+        } else {
+            print("cannot found movie detail")
+        }
     }
 }

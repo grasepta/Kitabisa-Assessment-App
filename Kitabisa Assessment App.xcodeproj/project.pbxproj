@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B77271C5280301E90040DDEA /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77271C4280301E90040DDEA /* MoviesViewModel.swift */; };
+		B71F48C52806591E005F03E9 /* MovieDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71F48C42806591E005F03E9 /* MovieDetailVC.swift */; };
+		B71F48C728065CE2005F03E9 /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71F48C628065CE2005F03E9 /* MovieDetailViewModel.swift */; };
+		B77271C5280301E90040DDEA /* MoviesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77271C4280301E90040DDEA /* MoviesListViewModel.swift */; };
 		B77271CB280327910040DDEA /* MoviesListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77271CA280327910040DDEA /* MoviesListTableViewCell.swift */; };
 		B77271CE2803DEBA0040DDEA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77271CD2803DEBA0040DDEA /* NetworkManager.swift */; };
 		B774741A2802938400DC3AE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77474192802938400DC3AE2 /* AppDelegate.swift */; };
@@ -43,7 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B77271C4280301E90040DDEA /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
+		B71F48C42806591E005F03E9 /* MovieDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailVC.swift; sourceTree = "<group>"; };
+		B71F48C628065CE2005F03E9 /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
+		B77271C4280301E90040DDEA /* MoviesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewModel.swift; sourceTree = "<group>"; };
 		B77271CA280327910040DDEA /* MoviesListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListTableViewCell.swift; sourceTree = "<group>"; };
 		B77271CD2803DEBA0040DDEA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B77474162802938400DC3AE2 /* Kitabisa Assessment App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kitabisa Assessment App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,7 +176,8 @@
 			children = (
 				B77474562802A6B200DC3AE2 /* Observable.swift */,
 				B77474512802A2BD00DC3AE2 /* PreferencesViewModel.swift */,
-				B77271C4280301E90040DDEA /* MoviesViewModel.swift */,
+				B77271C4280301E90040DDEA /* MoviesListViewModel.swift */,
+				B71F48C628065CE2005F03E9 /* MovieDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				B774741D2802938400DC3AE2 /* MovieListsVC.swift */,
+				B71F48C42806591E005F03E9 /* MovieDetailVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -351,8 +357,10 @@
 				B774741A2802938400DC3AE2 /* AppDelegate.swift in Sources */,
 				B77271CB280327910040DDEA /* MoviesListTableViewCell.swift in Sources */,
 				B774741C2802938400DC3AE2 /* SceneDelegate.swift in Sources */,
+				B71F48C728065CE2005F03E9 /* MovieDetailViewModel.swift in Sources */,
 				B77474522802A2BD00DC3AE2 /* PreferencesViewModel.swift in Sources */,
-				B77271C5280301E90040DDEA /* MoviesViewModel.swift in Sources */,
+				B71F48C52806591E005F03E9 /* MovieDetailVC.swift in Sources */,
+				B77271C5280301E90040DDEA /* MoviesListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

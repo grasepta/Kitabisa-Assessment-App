@@ -26,8 +26,8 @@ class MoviesListTableViewCell: UITableViewCell {
         fetchImage(posterUrl)
     }
     
-    func fetchImage(_ urlString: String) {
-        let url = "https://image.tmdb.org/t/p/w500/\(urlString)"
+    func fetchImage(_ posterPath: String) {
+        let url = "https://image.tmdb.org/t/p/w500/\(posterPath)"
         NetworkManager().fetchData(url: url) { result in
             DispatchQueue.main.async {
                 let image = UIImage(data: result!)

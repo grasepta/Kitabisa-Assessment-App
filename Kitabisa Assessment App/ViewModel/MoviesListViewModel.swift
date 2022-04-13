@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MoviesViewModel {
+class MoviesListViewModel {
     var popularMovies: Observable<[MovieModel]> = Observable([])
     var topRatedMovies: Observable<[MovieModel]> = Observable([])
     var nowPlayingMovies: Observable<[MovieModel]> = Observable([])
