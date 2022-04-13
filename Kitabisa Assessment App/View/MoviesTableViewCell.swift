@@ -28,10 +28,12 @@ class MoviesTableViewCell: UITableViewCell {
     
     func fetchImage(_ posterPath: String) {
         let url = "https://image.tmdb.org/t/p/w500/\(posterPath)"
-        NetworkManager().fetchData(url: url) { result in
-            DispatchQueue.main.async {
-                let image = UIImage(data: result!)
-                self.posterImageView.image = image
+        if posterImageView.image == nil {
+            NetworkManager().fetchData(url: url) { result in
+                DispatchQueue.main.async {
+                    let image = UIImage(data: result!)
+                    self.posterImageView.image = image
+                }
             }
         }
     }

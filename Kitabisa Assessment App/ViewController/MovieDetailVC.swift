@@ -71,6 +71,7 @@ class MovieDetailVC: UIViewController {
         reviewTableView.dataSource = self
         reviewTableView.delegate = self
     }
+    
     @IBAction func favoriteButtonTapped(_ sender: Any) {
         favoriteMovieVM.toggleFavorite(selectedMovieId!)
     }
