@@ -11,12 +11,14 @@ class MovieDetailVC: UIViewController {
     
     var selectedMovieId: Int?
     var movieDetailVM = MovieDetailViewModel()
+    var favoriteMovieVM = FavoriteMoviesViewModel()
     
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var releaseDateLabel: UILabel!
     @IBOutlet weak var overviewLabel: UILabel!
     @IBOutlet weak var reviewTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         commonInit()
@@ -68,6 +70,9 @@ class MovieDetailVC: UIViewController {
         reviewTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         reviewTableView.dataSource = self
         reviewTableView.delegate = self
+    }
+    @IBAction func favoriteButtonTapped(_ sender: Any) {
+        favoriteMovieVM.createItem(movieId: Int32(selectedMovieId!))
     }
 }
 

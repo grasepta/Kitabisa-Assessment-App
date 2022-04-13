@@ -16,7 +16,7 @@ extension FavoriteMovie {
         return NSFetchRequest<FavoriteMovie>(entityName: "FavoriteMovie")
     }
 
-    @NSManaged public var movieId: Int16
+    @NSManaged public var movieId: Int32
 
 }
 

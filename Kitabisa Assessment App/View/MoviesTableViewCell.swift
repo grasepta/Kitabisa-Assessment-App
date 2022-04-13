@@ -35,4 +35,18 @@ class MoviesTableViewCell: UITableViewCell {
             }
         }
     }
+    
+    func fetchMovieList(_ movieId: Int) {
+        let movieDetailVM = MovieDetailViewModel()
+        movieDetailVM.movieDetail.bind { [weak self] _ in
+            DispatchQueue.main.async {
+                self?.bindData(movieDetailVM.movieDetail.value?.title ?? "",
+                               movieDetailVM.movieDetail.value?.releaseDate ?? "",
+                               movieDetailVM.movieDetail.value?.overview ?? "",
+                               movieDetailVM.movieDetail.value?.posterPath ?? "")
+            }
+        }
+        movieDetailVM.getMoviesData(movieId)
+        
+    }
 }

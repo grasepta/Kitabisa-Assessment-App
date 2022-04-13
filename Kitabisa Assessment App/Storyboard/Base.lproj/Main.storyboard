@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BSd-yB-KIg">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BSd-yB-KIg">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" systemColor="opaqueSeparatorColor"/>
@@ -34,7 +34,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Info Film Bisa" id="nGn-Gg-lxe">
                         <barButtonItem key="backBarButtonItem" title="back" id="GX6-jz-hFO"/>
-                        <barButtonItem key="rightBarButtonItem" title="Fav Btn" id="oqf-zd-gX7">
+                        <barButtonItem key="rightBarButtonItem" title="Fav" id="oqf-zd-gX7">
                             <connections>
                                 <action selector="favButtonPressed:" destination="BYZ-38-t0r" id="1CZ-vy-HAt"/>
                             </connections>
@@ -60,13 +60,13 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="251"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DzX-yk-D7A">
-                                        <rect key="frame" x="174" y="16" width="144" height="20.5"/>
+                                        <rect key="frame" x="174" y="16" width="169.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" text="release date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TsV-Pa-vUq">
-                                        <rect key="frame" x="174" y="44.5" width="160" height="12"/>
+                                        <rect key="frame" x="174" y="44.5" width="185.5" height="12"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -84,9 +84,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCg-K7-Iut">
-                                        <rect key="frame" x="326" y="16" width="72" height="31"/>
+                                        <rect key="frame" x="351.5" y="16" width="46.5" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Fav Btn"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Fav"/>
+                                        <connections>
+                                            <action selector="favoriteButtonTapped:" destination="XDG-RQ-PKv" eventType="touchUpInside" id="HZm-RO-UPl"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z7x-te-znV">
                                         <rect key="frame" x="20" y="16" width="146" height="219"/>
@@ -159,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OnT-Du-VIY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1728.985507246377" y="69.642857142857139"/>
+            <point key="canvasLocation" x="1729" y="70"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FKj-qS-4TC">
@@ -205,6 +208,9 @@
                     <navigationItem key="navigationItem" title="Favorite Movie" id="u0G-Py-xGz">
                         <barButtonItem key="backBarButtonItem" title="back" id="LHq-rO-vN4"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="FavListTV" destination="fon-7Z-PTk" id="gB5-lg-bEI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h9N-KR-AI1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
