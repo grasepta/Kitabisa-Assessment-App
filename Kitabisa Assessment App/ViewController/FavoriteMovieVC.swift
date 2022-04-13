@@ -19,6 +19,11 @@ class FavoriteMovieVC: UIViewController {
         commonInit()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        getData()
+    }
+    
     func setupFavListTV() {
         let nib = UINib(nibName: "MoviesTableViewCell", bundle: nil)
         FavListTV.register(nib, forCellReuseIdentifier: "MoviesTableViewCell")
@@ -28,12 +33,6 @@ class FavoriteMovieVC: UIViewController {
     
     func commonInit() {
         setupFavListTV()
-        setupListener()
-        getData()
-    }
-    
-    func setupListener() {
-        
     }
     
     func getData() {

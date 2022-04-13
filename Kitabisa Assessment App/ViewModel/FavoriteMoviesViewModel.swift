@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class FavoriteMoviesViewModel {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -17,8 +18,7 @@ class FavoriteMoviesViewModel {
             DispatchQueue.main.async {
                 completion()
             }
-        }
-        catch { 
+        } catch {
             //error
         }
     }
@@ -29,18 +29,49 @@ class FavoriteMoviesViewModel {
         
         do {
             try context.save()
-        }
-        catch {
+        } catch {
         }
     }
     
-    func deleteItem(item: FavoriteMovie) {
-        context.delete(item)
-        
+    func deleteItem(movieId: Int32) {
+        let fetchRequest: NSFetchRequest<FavoriteMovie> = FavoriteMovie.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "movieId==\(movieId)")
+        let objects = try! context.fetch(fetchRequest)
+        for obj in objects {
+            context.delete(obj)
+        }
+
         do {
             try context.save()
+            
+        } catch {
+            //error
         }
-        catch {
+    }
+    
+    func checkIfItemExist(id: Int) -> Bool {
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "FavoriteMovie")
+        fetchRequest.fetchLimit =  1
+        fetchRequest.predicate = NSPredicate(format: "movieId == %d" ,id)
+
+        do {
+            let count = try context.count(for: fetchRequest)
+            if count > 0 {
+                return true
+            }else {
+                return false
+            }
+        }catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+            return false
+        }
+    }
+    
+    func toggleFavorite(_ movieId:Int) {
+        if checkIfItemExist(id: movieId) {
+            deleteItem(movieId: Int32(movieId))
+        } else {
+            createItem(movieId: Int32(movieId))
         }
     }
 }

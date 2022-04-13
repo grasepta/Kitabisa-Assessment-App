@@ -72,7 +72,7 @@ class MovieDetailVC: UIViewController {
         reviewTableView.delegate = self
     }
     @IBAction func favoriteButtonTapped(_ sender: Any) {
-        favoriteMovieVM.createItem(movieId: Int32(selectedMovieId!))
+        favoriteMovieVM.toggleFavorite(selectedMovieId!)
     }
 }
 
