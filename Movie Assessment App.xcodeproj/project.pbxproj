@@ -137,8 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				B77474182802938400DC3AE2 /* Movie Assessment App */,
-				B77474322802938800DC3AE2 /* Kitabisa Assessment AppTests */,
-				B774743C2802938800DC3AE2 /* Kitabisa Assessment AppUITests */,
+				B77474322802938800DC3AE2 /* Movie Assessment AppTests */,
+				B774743C2802938800DC3AE2 /* Movie Assessment AppUITests */,
 				B77474172802938400DC3AE2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -168,21 +168,21 @@
 			path = "Movie Assessment App";
 			sourceTree = "<group>";
 		};
-		B77474322802938800DC3AE2 /* Kitabisa Assessment AppTests */ = {
+		B77474322802938800DC3AE2 /* Movie Assessment AppTests */ = {
 			isa = PBXGroup;
 			children = (
 				B77474332802938800DC3AE2 /* Kitabisa_Assessment_AppTests.swift */,
 			);
-			path = "Kitabisa Assessment AppTests";
+			path = "Movie Assessment AppTests";
 			sourceTree = "<group>";
 		};
-		B774743C2802938800DC3AE2 /* Kitabisa Assessment AppUITests */ = {
+		B774743C2802938800DC3AE2 /* Movie Assessment AppUITests */ = {
 			isa = PBXGroup;
 			children = (
 				B774743D2802938800DC3AE2 /* Kitabisa_Assessment_AppUITests.swift */,
 				B774743F2802938800DC3AE2 /* Kitabisa_Assessment_AppUITestsLaunchTests.swift */,
 			);
-			path = "Kitabisa Assessment AppUITests";
+			path = "Movie Assessment AppUITests";
 			sourceTree = "<group>";
 		};
 		B774744C2802A21000DC3AE2 /* Model */ = {
