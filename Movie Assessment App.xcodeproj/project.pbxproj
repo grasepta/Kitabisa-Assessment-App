@@ -62,7 +62,7 @@
 		B77271C4280301E90040DDEA /* MoviesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewModel.swift; sourceTree = "<group>"; };
 		B77271CA280327910040DDEA /* MoviesListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListTableViewCell.swift; sourceTree = "<group>"; };
 		B77271CD2803DEBA0040DDEA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		B77474162802938400DC3AE2 /* Kitabisa Assessment App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kitabisa Assessment App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B77474162802938400DC3AE2 /* Movie Assessment App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie Assessment App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B77474192802938400DC3AE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B774741B2802938400DC3AE2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B774741D2802938400DC3AE2 /* MovieListsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListsVC.swift; sourceTree = "<group>"; };
@@ -71,9 +71,9 @@
 		B77474252802938800DC3AE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B77474282802938800DC3AE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B774742A2802938800DC3AE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B774742F2802938800DC3AE2 /* Kitabisa Assessment AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kitabisa Assessment AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B774742F2802938800DC3AE2 /* Movie Assessment AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Movie Assessment AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B77474332802938800DC3AE2 /* Kitabisa_Assessment_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kitabisa_Assessment_AppTests.swift; sourceTree = "<group>"; };
-		B77474392802938800DC3AE2 /* Kitabisa Assessment AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kitabisa Assessment AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B77474392802938800DC3AE2 /* Movie Assessment AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Movie Assessment AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B774743D2802938800DC3AE2 /* Kitabisa_Assessment_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kitabisa_Assessment_AppUITests.swift; sourceTree = "<group>"; };
 		B774743F2802938800DC3AE2 /* Kitabisa_Assessment_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kitabisa_Assessment_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B774744D2802A22700DC3AE2 /* MoviesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesModel.swift; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 		B774740D2802938400DC3AE2 = {
 			isa = PBXGroup;
 			children = (
-				B77474182802938400DC3AE2 /* Kitabisa Assessment App */,
+				B77474182802938400DC3AE2 /* Movie Assessment App */,
 				B77474322802938800DC3AE2 /* Kitabisa Assessment AppTests */,
 				B774743C2802938800DC3AE2 /* Kitabisa Assessment AppUITests */,
 				B77474172802938400DC3AE2 /* Products */,
@@ -146,14 +146,14 @@
 		B77474172802938400DC3AE2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B77474162802938400DC3AE2 /* Kitabisa Assessment App.app */,
-				B774742F2802938800DC3AE2 /* Kitabisa Assessment AppTests.xctest */,
-				B77474392802938800DC3AE2 /* Kitabisa Assessment AppUITests.xctest */,
+				B77474162802938400DC3AE2 /* Movie Assessment App.app */,
+				B774742F2802938800DC3AE2 /* Movie Assessment AppTests.xctest */,
+				B77474392802938800DC3AE2 /* Movie Assessment AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B77474182802938400DC3AE2 /* Kitabisa Assessment App */ = {
+		B77474182802938400DC3AE2 /* Movie Assessment App */ = {
 			isa = PBXGroup;
 			children = (
 				B77271CC2803DEAB0040DDEA /* Network */,
@@ -165,7 +165,7 @@
 				B774744F2802A28100DC3AE2 /* ViewModel */,
 				B774744C2802A21000DC3AE2 /* Model */,
 			);
-			path = "Kitabisa Assessment App";
+			path = "Movie Assessment App";
 			sourceTree = "<group>";
 		};
 		B77474322802938800DC3AE2 /* Kitabisa Assessment AppTests */ = {
@@ -247,9 +247,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B77474152802938400DC3AE2 /* Kitabisa Assessment App */ = {
+		B77474152802938400DC3AE2 /* Movie Assessment App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B77474432802938800DC3AE2 /* Build configuration list for PBXNativeTarget "Kitabisa Assessment App" */;
+			buildConfigurationList = B77474432802938800DC3AE2 /* Build configuration list for PBXNativeTarget "Movie Assessment App" */;
 			buildPhases = (
 				B77474122802938400DC3AE2 /* Sources */,
 				B77474132802938400DC3AE2 /* Frameworks */,
@@ -259,14 +259,14 @@
 			);
 			dependencies = (
 			);
-			name = "Kitabisa Assessment App";
+			name = "Movie Assessment App";
 			productName = "Kitabisa Assessment App";
-			productReference = B77474162802938400DC3AE2 /* Kitabisa Assessment App.app */;
+			productReference = B77474162802938400DC3AE2 /* Movie Assessment App.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B774742E2802938800DC3AE2 /* Kitabisa Assessment AppTests */ = {
+		B774742E2802938800DC3AE2 /* Movie Assessment AppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B77474462802938800DC3AE2 /* Build configuration list for PBXNativeTarget "Kitabisa Assessment AppTests" */;
+			buildConfigurationList = B77474462802938800DC3AE2 /* Build configuration list for PBXNativeTarget "Movie Assessment AppTests" */;
 			buildPhases = (
 				B774742B2802938800DC3AE2 /* Sources */,
 				B774742C2802938800DC3AE2 /* Frameworks */,
@@ -277,14 +277,14 @@
 			dependencies = (
 				B77474312802938800DC3AE2 /* PBXTargetDependency */,
 			);
-			name = "Kitabisa Assessment AppTests";
+			name = "Movie Assessment AppTests";
 			productName = "Kitabisa Assessment AppTests";
-			productReference = B774742F2802938800DC3AE2 /* Kitabisa Assessment AppTests.xctest */;
+			productReference = B774742F2802938800DC3AE2 /* Movie Assessment AppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B77474382802938800DC3AE2 /* Kitabisa Assessment AppUITests */ = {
+		B77474382802938800DC3AE2 /* Movie Assessment AppUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B77474492802938800DC3AE2 /* Build configuration list for PBXNativeTarget "Kitabisa Assessment AppUITests" */;
+			buildConfigurationList = B77474492802938800DC3AE2 /* Build configuration list for PBXNativeTarget "Movie Assessment AppUITests" */;
 			buildPhases = (
 				B77474352802938800DC3AE2 /* Sources */,
 				B77474362802938800DC3AE2 /* Frameworks */,
@@ -295,9 +295,9 @@
 			dependencies = (
 				B774743B2802938800DC3AE2 /* PBXTargetDependency */,
 			);
-			name = "Kitabisa Assessment AppUITests";
+			name = "Movie Assessment AppUITests";
 			productName = "Kitabisa Assessment AppUITests";
-			productReference = B77474392802938800DC3AE2 /* Kitabisa Assessment AppUITests.xctest */;
+			productReference = B77474392802938800DC3AE2 /* Movie Assessment AppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -323,7 +323,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B77474112802938400DC3AE2 /* Build configuration list for PBXProject "Kitabisa Assessment App" */;
+			buildConfigurationList = B77474112802938400DC3AE2 /* Build configuration list for PBXProject "Movie Assessment App" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -336,9 +336,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B77474152802938400DC3AE2 /* Kitabisa Assessment App */,
-				B774742E2802938800DC3AE2 /* Kitabisa Assessment AppTests */,
-				B77474382802938800DC3AE2 /* Kitabisa Assessment AppUITests */,
+				B77474152802938400DC3AE2 /* Movie Assessment App */,
+				B774742E2802938800DC3AE2 /* Movie Assessment AppTests */,
+				B77474382802938800DC3AE2 /* Movie Assessment AppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -418,12 +418,12 @@
 /* Begin PBXTargetDependency section */
 		B77474312802938800DC3AE2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B77474152802938400DC3AE2 /* Kitabisa Assessment App */;
+			target = B77474152802938400DC3AE2 /* Movie Assessment App */;
 			targetProxy = B77474302802938800DC3AE2 /* PBXContainerItemProxy */;
 		};
 		B774743B2802938800DC3AE2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B77474152802938400DC3AE2 /* Kitabisa Assessment App */;
+			target = B77474152802938400DC3AE2 /* Movie Assessment App */;
 			targetProxy = B774743A2802938800DC3AE2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -638,7 +638,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kitabisa Assessment App.app/Kitabisa Assessment App";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Movie Assessment App.app/Movie Assessment App";
 			};
 			name = Debug;
 		};
@@ -658,7 +658,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kitabisa Assessment App.app/Kitabisa Assessment App";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Movie Assessment App.app/Movie Assessment App";
 			};
 			name = Release;
 		};
@@ -701,7 +701,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B77474112802938400DC3AE2 /* Build configuration list for PBXProject "Kitabisa Assessment App" */ = {
+		B77474112802938400DC3AE2 /* Build configuration list for PBXProject "Movie Assessment App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B77474412802938800DC3AE2 /* Debug */,
@@ -710,7 +710,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B77474432802938800DC3AE2 /* Build configuration list for PBXNativeTarget "Kitabisa Assessment App" */ = {
+		B77474432802938800DC3AE2 /* Build configuration list for PBXNativeTarget "Movie Assessment App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B77474442802938800DC3AE2 /* Debug */,
@@ -719,7 +719,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B77474462802938800DC3AE2 /* Build configuration list for PBXNativeTarget "Kitabisa Assessment AppTests" */ = {
+		B77474462802938800DC3AE2 /* Build configuration list for PBXNativeTarget "Movie Assessment AppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B77474472802938800DC3AE2 /* Debug */,
@@ -728,7 +728,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B77474492802938800DC3AE2 /* Build configuration list for PBXNativeTarget "Kitabisa Assessment AppUITests" */ = {
+		B77474492802938800DC3AE2 /* Build configuration list for PBXNativeTarget "Movie Assessment AppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B774744A2802938800DC3AE2 /* Debug */,
